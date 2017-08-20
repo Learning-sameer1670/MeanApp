@@ -22,3 +22,9 @@ app.get('*', (req, res) => {
 app.listen(port, function(){
     console.log("Server running on localhost:" + port);
 });
+
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
+// Rest of server.js code below
